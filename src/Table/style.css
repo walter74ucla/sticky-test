@@ -1,0 +1,32 @@
+/*https://css-tricks.com/idea-simple-responsive-spreadsheet/*/
+
+.table-wrapper {
+	/*max-width: 700px;*/
+	overflow: scroll;
+}
+
+/*The heading of our table*/
+th {
+	position: sticky;
+	top: 0px;
+	z-index: 2;
+	background-color: purple; 
+
+	the first cell that lives in the top left of our spreadsheet
+	&:first-of-type {
+		left: 0;
+		z-index: 3;
+	}
+}
+
+/*The first column that we want to stick to the left*/
+tbody tr td:first-of-type {
+	position: sticky;
+	left: 0px;
+	z-index: 1;
+}
+
+.sticky-top {
+	background-color: blue;
+	color: blue;
+}

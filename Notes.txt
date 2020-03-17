@@ -1,0 +1,15 @@
+================================================================================
+Steps for creating a react app
+(in the root directory)
+$ npx create-react-app my-app
+$ cd my-app
+$ npm start
+
+update the .gitignore file as necessary
+https://github.com/facebook/react/blob/master/.gitignore
+================================================================================
+Steps for setting up semantic-ui-react
+$ npm install semantic-ui-css
+$ npm install semantic-ui-react
+Inside of src/index.js, above -->import './index.css';, insert -->import 'semantic-ui-css/semantic.min.css'
+================================================================================
