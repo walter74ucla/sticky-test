@@ -1,43 +1,71 @@
+// This file does not show the horizontal scroll bar
+// It is not linked to a style.css file
+
 import React from 'react';
 import { Icon, Menu, Table, Segment } from 'semantic-ui-react';
-import './style.css';
 
+
+const headerStyle = {
+  backgroundColor: 'purple',
+  color: 'white',
+  position: 'sticky',
+  top: 0,
+  zIndex: 2,
+}
+
+const firstColStyle = {
+  position: 'sticky',
+  left: 0,
+  zIndex: 1,
+  backgroundColor: 'blue',
+  color: 'white',
+}
+
+const headerFixedCellStyle = {
+  zIndex: 100,
+  left: 0,
+  backgroundColor: 'black',
+}
 
 const TableExamplePagination = () => (
-    <Table celled striped stackable className='freeze-head-and-col'>
-    {/* definition prop overrides the style.css */}
+  // <Segment style={{overflow: 'auto'}} inverted color='red'>
+  // {/* style={{overflow: 'auto'}} gives me the horizontal and vertical scroll bars */}
+  // {/* sticky headerStyle does not work with overflow: 'auto' in the Segment element*/}
+  // {/* sticky firstColStyle does not work without overflow: 'auto' in the Segment element*/}
+
+    <Table definition celled striped stackable className='header-fixed-cell'>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell></Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
-          <Table.HeaderCell>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle, firstColStyle, headerFixedCellStyle}></Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
+          <Table.HeaderCell style={headerStyle}>Header</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
 
       <Table.Body>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -63,7 +91,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -89,7 +117,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -115,7 +143,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -141,7 +169,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -167,7 +195,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -193,7 +221,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -219,7 +247,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -245,7 +273,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -271,7 +299,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -297,7 +325,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -323,7 +351,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -349,7 +377,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -375,7 +403,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -401,7 +429,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -427,7 +455,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -453,7 +481,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -479,7 +507,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -505,7 +533,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -531,7 +559,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -557,7 +585,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -583,7 +611,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -609,7 +637,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -635,7 +663,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -661,7 +689,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -687,7 +715,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -713,7 +741,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -739,7 +767,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -765,7 +793,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -791,7 +819,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -817,7 +845,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -843,7 +871,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -869,7 +897,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -895,7 +923,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -921,7 +949,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -947,7 +975,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -973,7 +1001,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -999,7 +1027,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -1025,7 +1053,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -1051,7 +1079,7 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Fixed</Table.Cell>
+          <Table.Cell style={firstColStyle}>Fixed</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
           <Table.Cell>Cell</Table.Cell>
@@ -1077,7 +1105,26 @@ const TableExamplePagination = () => (
           <Table.Cell>Cell</Table.Cell>
         </Table.Row>
       </Table.Body>
+      <Table.Footer>
+        <Table.Row>
+          <Table.HeaderCell colSpan='12'>
+            <Menu floated='right' pagination>
+              <Menu.Item as='a' icon>
+                <Icon name='chevron left' />
+              </Menu.Item>
+              <Menu.Item as='a'>1</Menu.Item>
+              <Menu.Item as='a'>2</Menu.Item>
+              <Menu.Item as='a'>3</Menu.Item>
+              <Menu.Item as='a'>4</Menu.Item>
+              <Menu.Item as='a' icon>
+                <Icon name='chevron right' />
+              </Menu.Item>
+            </Menu>
+          </Table.HeaderCell>
+        </Table.Row>
+      </Table.Footer>
     </Table>
+  // </Segment>
 )
 
-export default TableExamplePagination;
+export default TableExamplePagination
