@@ -4,8 +4,9 @@ import './style.css';
 
 
 const TableExamplePagination = () => (
-    <Table celled striped stackable className='freeze-head-and-col'>
-    {/* definition prop overrides the style.css */}
+    <Table celled striped unstackable className='freeze-head-and-col'>
+    {/* definition prop overrides the style.css
+        adding the unstackable prop let the formatting show up on mobile, but the stickyness does not work */}
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell></Table.HeaderCell>
