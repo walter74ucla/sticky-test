@@ -4,9 +4,11 @@ import './style.css';
 
 
 const TableExamplePagination = () => (
-    <Table celled striped unstackable className='freeze-head-and-col'>
+  <React.Fragment>
+  <Segment className='test' inverted color='yellow'>Testing 123</Segment>
+    <Table celled unstackable className='freeze-head-and-col mobile'>
     {/* definition prop overrides the style.css
-        adding the unstackable prop let the formatting show up on mobile, but the stickyness does not work */}
+        adding the unstackable prop let the formatting show up on mobile, but the stickiness does not work */}
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell></Table.HeaderCell>
@@ -1079,6 +1081,7 @@ const TableExamplePagination = () => (
         </Table.Row>
       </Table.Body>
     </Table>
+  </React.Fragment>
 )
 
 export default TableExamplePagination;

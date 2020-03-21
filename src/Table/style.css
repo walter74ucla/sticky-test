@@ -1,12 +1,23 @@
 body {
-	overflow-x: auto; /* It seems like the default is overflow-x: hidden; */
+	overflow: visible;  /*It seems like the default is overflow-x: hidden;*/
+}
+
+
+/*https://stackoverflow.com/questions/55005996/overriding-styles-in-semantic-ui-react*/
+div.ui.test { /*does not work on mobile*/
+  position: -webkit-sticky; 
+  position: sticky; 
+  top: 0px; 
+  background-color: violet; /* does not work on Segment */
+  color: black; /* does not work on Segment */
+  font-weight: bold;
 }
 
 /*Fix the header to the top*/
 .freeze-head-and-col tr:first-of-type th{
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
+  top: 47px;
   background-color: cyan;
 }
 
@@ -24,4 +35,45 @@ body {
   z-index:100;
   left: 0;
   background-color: black;
+}
+
+@media only screen and (max-width: 768px) {
+   /*For mobile phones: */
+  td {
+    background-color: gold;
+  }
+
+  div.ui.test { /*does not work on mobile*/
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 0px; 
+    background-color: violet; /* does not work on Segment */
+    color: black; /* does not work on Segment */
+    font-weight: bold;
+  }
+
+  /*Fix the header to the top*/
+  .mobile tr:first-of-type th{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background-color: blue;
+  }
+
+  /*Fix the first column  to the left*/
+  .mobile td:first-of-type{
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: green;
+    left: 0px;
+    font-weight: bold;
+  }
+
+   /*Edit: corner fixed always*/
+  .mobile tr:first-of-type th:first-of-type{
+    z-index:100;
+    left: 0;
+    background-color: olive;
+  }
+
 }
