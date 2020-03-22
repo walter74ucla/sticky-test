@@ -1,8 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Table from './Table';
-import Sticky from './Sticky/version-2.js';
+// import Table from './Table';
+import Sticky from './Sticky/version-3.js';
 
 function App() {
   return (

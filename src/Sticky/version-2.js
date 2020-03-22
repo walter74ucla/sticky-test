@@ -53,7 +53,8 @@ const overlayMenuStyle = {
 
 const fixedOverlayMenuStyle = {
   ...overlayMenuStyle,
-  left: '800px',
+  // left: '800px',
+  left: '615px', // ends up being right aligned with the div.ui.text.container
 }
 
 const LeftImage = () => (
@@ -61,7 +62,7 @@ const LeftImage = () => (
     floated='left'
     size='medium'
     src='/images/square-image.png'
-    style={{ margin: '2em 2em 2em -4em' }}
+    style={{ margin: '2em 2em 2em 0em' }}
   />
 )
 
@@ -70,7 +71,7 @@ const RightImage = () => (
     floated='right'
     size='medium'
     src='/images/square-image.png'
-    style={{ margin: '2em -4em 2em 2em' }}
+    style={{ margin: '2em 0em 2em 2em' }}
   />
 )
 
