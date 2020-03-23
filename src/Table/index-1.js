@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, Menu, Table, Segment } from 'semantic-ui-react';
-import './style.css';
+import './style-1.css';
 
 
 const TableExamplePagination = () => (
