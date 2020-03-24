@@ -1,0 +1,54 @@
+body {
+	overflow: visible;  /*It seems like the default is overflow-x: hidden;*/
+}
+
+
+/*Fix the header to the top*/
+.freeze-head-and-col tr:first-of-type th{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: cyan;
+}
+
+/*Fix the first column  to the left*/
+.freeze-head-and-col td:first-of-type{
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: red;
+  left: 0px;
+  font-weight: bold;
+}
+
+/* Edit: corner fixed always */
+.freeze-head-and-col tr:first-of-type th:first-of-type{
+  z-index:100;
+  left: 0;
+  background-color: black;
+}
+
+.test {
+	background-color: yellow;
+	height: 100px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+   	/*For mobile phones: */
+
+	.table-cell {
+		background-color: pink;
+	}
+
+  	/*Fix the header to the top*/
+	table.freeze-head-and-col .header-row .header-cell {
+	  position: -webkit-sticky;
+	  position: fixed;
+	  top: 50px;
+	  left: 150px;
+	  background-color: purple;
+	}
+
+}

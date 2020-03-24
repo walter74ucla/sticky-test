@@ -5,17 +5,17 @@ import './style-2.css';
 
 
 const HeaderRow = () => (
-  <Table.HeaderCell>Header</Table.HeaderCell>
+  <Table.HeaderCell className='header-cell'>Header</Table.HeaderCell>
 )
 const TableCell = () => (
-  <Table.Cell>Cell</Table.Cell>
+  <Table.Cell className='table-cell'>Cell</Table.Cell>
 )
 const TableRow = () =>  (
-  <Table.Row>
-    <Table.Cell>FirstFixed</Table.Cell>
+  <Table.Row className='table-row'>
+    <Table.Cell className='table-cell first-column'>FirstFixed</Table.Cell>
     {_.times(20, (i) => (
-            <TableCell key={i} />
-          ))}
+		<TableCell key={i} />
+	))}
   </Table.Row>
 )
 
@@ -30,23 +30,27 @@ class TableFreezeHeaderColumn extends Component {
 
 
   render() {
- 
+ 	let vh = window.innerHeight;
+ 	let vw = window.innerWidth;
+ 	console.log(vh + ' x '+ vw);
+
     return(
       <React.Fragment>
-          <Table celled unstackable>        
+      	<div className='test'>TEST</div>
+          <Table celled unstackable className='freeze-head-and-col'>        
             <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell>HeaderFixed</Table.HeaderCell>
+              <Table.Row className='header-row'>
+                <Table.HeaderCell className='header-cell'>HeaderFixed</Table.HeaderCell>
                 {_.times(20, (i) => (
-                        <HeaderRow key={i} />
-                      ))}
+	            	<HeaderRow key={i} />
+	            ))}
               </Table.Row>
             </Table.Header>        
 
             <Table.Body>
-              {_.times(25, (i) => (
-                        <TableRow key={i} />
-                      ))}
+	        	{_.times(25, (i) => (
+	        		<TableRow key={i} />
+	        	))}
             </Table.Body>
           
           </Table>
