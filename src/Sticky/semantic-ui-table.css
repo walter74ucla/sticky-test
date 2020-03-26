@@ -677,4 +677,90 @@
 .ui.inverted.definition.table tfoot:not(.full-width) th:first-child,.ui.inverted.definition.table thead:not(.full-width) th:first-child {
 	background:#fff;
 }
-.ui.inverted.definition.table tr td:first-child{background:rgba(255,255,255,.02);color:#fff}.ui.collapsing.table{width:auto}.ui.basic.table{background:0 0;border:1px solid rgba(34,36,38,.15);-webkit-box-shadow:none;box-shadow:none}.ui.basic.table tfoot,.ui.basic.table thead{-webkit-box-shadow:none;box-shadow:none}.ui.basic.table th{background:0 0;border-left:none}.ui.basic.table tbody tr{border-bottom:1px solid rgba(0,0,0,.1)}.ui.basic.table td{background:0 0}.ui.basic.striped.table tbody tr:nth-child(2n){background-color:rgba(0,0,0,.05)!important}.ui[class*="very basic"].table{border:none}.ui[class*="very basic"].table:not(.sortable):not(.striped) td,.ui[class*="very basic"].table:not(.sortable):not(.striped) th{padding:''}.ui[class*="very basic"].table:not(.sortable):not(.striped) td:first-child,.ui[class*="very basic"].table:not(.sortable):not(.striped) th:first-child{padding-left:0}.ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child,.ui[class*="very basic"].table:not(.sortable):not(.striped) th:last-child{padding-right:0}.ui[class*="very basic"].table:not(.sortable):not(.striped) thead tr:first-child th{padding-top:0}.ui.celled.table tr td,.ui.celled.table tr th{border-left:1px solid rgba(34,36,38,.1)}.ui.celled.table tr td:first-child,.ui.celled.table tr th:first-child{border-left:none}.ui.padded.table th{padding-left:1em;padding-right:1em}.ui.padded.table td,.ui.padded.table th{padding:1em 1em}.ui[class*="very padded"].table th{padding-left:1.5em;padding-right:1.5em}.ui[class*="very padded"].table td{padding:1.5em 1.5em}.ui.compact.table th{padding-left:.7em;padding-right:.7em}.ui.compact.table td{padding:.5em .7em}.ui[class*="very compact"].table th{padding-left:.6em;padding-right:.6em}.ui[class*="very compact"].table td{padding:.4em .6em}.ui.small.table{font-size:.9em}.ui.table{font-size:1em}.ui.large.table{font-size:1.1em}/*!
+.ui.inverted.definition.table tr td:first-child {
+	background:rgba(255,255,255,.02);
+	color:#fff;
+}
+.ui.collapsing.table {
+	width:auto;
+}
+.ui.basic.table {
+	background:0 0;
+	border:1px solid rgba(34,36,38,.15);
+	-webkit-box-shadow:none;box-shadow:none;
+}
+.ui.basic.table tfoot,.ui.basic.table thead {
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+.ui.basic.table th {
+	background:0 0;
+	border-left:none;
+}
+.ui.basic.table tbody tr {
+	border-bottom:1px solid rgba(0,0,0,.1);
+}
+.ui.basic.table td {
+	background:0 0;
+}
+.ui.basic.striped.table tbody tr:nth-child(2n) {
+	background-color:rgba(0,0,0,.05)!important;
+}
+.ui[class*="very basic"].table {
+	border:none;
+}
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td,.ui[class*="very basic"].table:not(.sortable):not(.striped) th {
+	padding:'';
+}
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td:first-child,.ui[class*="very basic"].table:not(.sortable):not(.striped) th:first-child {
+	padding-left:0;
+}
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child,.ui[class*="very basic"].table:not(.sortable):not(.striped) th:last-child {
+	padding-right:0;
+}
+.ui[class*="very basic"].table:not(.sortable):not(.striped) thead tr:first-child th {
+	padding-top:0;
+}
+.ui.celled.table tr td,.ui.celled.table tr th {
+	border-left:1px solid rgba(34,36,38,.1);
+}
+.ui.celled.table tr td:first-child,.ui.celled.table tr th:first-child {
+	border-left:none;
+}
+.ui.padded.table th {
+	padding-left:1em;
+	padding-right:1em;
+}
+.ui.padded.table td,.ui.padded.table th {
+	padding:1em 1em;
+}
+.ui[class*="very padded"].table th {
+	padding-left:1.5em;
+	padding-right:1.5em;
+}
+.ui[class*="very padded"].table td {
+	padding:1.5em 1.5em;
+}
+.ui.compact.table th {
+	padding-left:.7em;
+	padding-right:.7em;
+}
+.ui.compact.table td {
+	padding:.5em .7em;
+}
+.ui[class*="very compact"].table th {
+	padding-left:.6em;
+	padding-right:.6em;
+}
+.ui[class*="very compact"].table td {
+	padding:.4em .6em;
+}
+.ui.small.table {
+	font-size:.9em;
+}
+.ui.table {
+	font-size:1em;
+}
+.ui.large.table {
+	font-size:1.1em;
+}

@@ -21,7 +21,7 @@ const TableCell = () => (
   <Table.Cell>Cell</Table.Cell>
 )
 const TableRow = () =>  (
-  <Table.Row>
+  <Table.Row >
     <Table.Cell>FirstFixed</Table.Cell>
     {_.times(20, (i) => (
             <TableCell key={i} />
