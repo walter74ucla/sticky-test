@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 // import Table from './Table/index-2.js';
 // import Sticky, { TableExamplePagination } from './Sticky/version-3.js'; // https://www.geeksforgeeks.org/reactjs-importing-exporting/
-import Sticky from './Sticky/version-4.js';
+import Sticky from './Sticky/version-5.js';
 
 function App() {
   return (
