@@ -1,4 +1,3 @@
-// This is close...the header row is off by a little bit
 
 import _ from 'lodash';
 import React, { Component, createRef } from 'react';
@@ -15,6 +14,7 @@ const fixedOverlayStyleHeaderRow = { // for the Header Row, initial style
   position: 'sticky', // position sticky works on <th>
   top: 0,
   zIndex: 1,
+  whiteSpace: 'nowrap',
   border: '3px solid blue',
   display: 'block', // Show it
 }
@@ -25,7 +25,7 @@ const overlayHeaderRowStyle = {
 
 const fixedOverlayHeaderRowStyle = { // updates style
   ...overlayHeaderRowStyle,
-  display: 'inline', // Show it
+  display: 'inline-block', // Show it
   border: '1px solid red',
   backgroundColor: 'purple',
   color: 'white',
