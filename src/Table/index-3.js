@@ -37,7 +37,7 @@ class TableFreezeHeaderColumn extends Component {
     return(
       <React.Fragment>
       	
-          <Table celled unstackable className='freeze-head-and-col'>        
+          <Table celled unstackable className='freeze-head-and-col'>
             <Table.Header>
               <Table.Row className='header-row'>
                 <Table.HeaderCell className='header-cell'>HeaderFixed</Table.HeaderCell>
