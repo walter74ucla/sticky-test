@@ -171,7 +171,7 @@ class TableFreezeHeaderColumn extends Component {
     const FirstColumnOverlay = () => (
       <Table.Row className='table-row'>
         <Table.Cell 
-          className='first-column-cell'
+          className='first-column-cell-overlay'
           style={overlayFixedFirstColumn ? fixedOverlayFirstColumnStyle : overlayFirstColumnStyle }
           >FirstFixed
         </Table.Cell>

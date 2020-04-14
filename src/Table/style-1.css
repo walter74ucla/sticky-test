@@ -13,6 +13,7 @@ div.ui.test { /*does not work on mobile*/
   font-weight: bold;
 }
 
+/*https://css-tricks.com/idea-simple-responsive-spreadsheet/*/
 /*Fix the header to the top*/
 .freeze-head-and-col tr:first-of-type th{
   position: -webkit-sticky;
